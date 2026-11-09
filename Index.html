@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAKOOTA | New York Street Food</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: white;
+}
+
+header {
+    background: #090909;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ed1c24;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffdf00;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ed1c24;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffdf00;
+}
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.78)),
+    url("Zakoota.jpg") center 40%/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 90px);
+    font-weight: 1000;
+    color: #ffdf00;
+    text-shadow: 4px 4px #ed1c24;
+}
+
+.hero h2 {
+    font-size: clamp(22px, 4vw, 38px);
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ed1c24;
+    color: white;
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #ffdf00;
+    color: #111;
+    transform: scale(1.05);
+}
+
+.section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 38px;
+    color: #ffdf00;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    color: #ccc;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.menu-card {
+    background: #202020;
+    border-radius: 18px;
+    padding: 35px 20px;
+    border: 1px solid #444;
+    transition: .3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    border-color: #ed1c24;
+}
+
+.menu-card .emoji {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    font-size: 23px;
+    color: #ffdf00;
+    margin-bottom: 12px;
+}
+
+.menu-card p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.special {
+    background: #ed1c24;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.special h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.special p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.special .btn {
+    background: #ffdf00;
+    color: #111;
+}
+
+.location {
+    background: #191919;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.location h2 {
+    color: #ffdf00;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.location p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+footer {
+    background: #050505;
+    padding: 30px 15px;
+    text-align: center;
+    border-top: 3px solid #ed1c24;
+    color: #aaa;
+}
+
+footer strong {
+    color: #ffdf00;
+}
+
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+}
+
+.order-section {
+    background: #111;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.order-section h2 {
+    color: #ffdf00;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.order-section p {
+    color: #ddd;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.order-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 18px 35px;
+    border-radius: 12px;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.call-btn {
+    background: #ffdf00;
+    color: #111;
+}
+
+.uber-btn {
+    background: #06C167;
+}
+
+.door-btn {
+    background: #EB1700;
+}
+
+.order-btn:hover {
+    transform: translateY(-5px);
+    opacity: .85;
+}
+
+.opening-hours {
+    margin: 30px auto;
+    padding: 22px;
+    max-width: 420px;
+    background: #252525;
+    border: 2px solid #ffdf00;
+    border-radius: 15px;
+}
+
+.opening-hours h3 {
+    color: #ffdf00;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.opening-hours p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ZAKOO<span>TA</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#location">Location</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>ZAKOOTA</h1>
+        <h2>WELCOME TO NEW YORK STREET FOOD!</h2>
+
+        <p>
+            At Shop 4, 61 Mabo Boulevard Bonner ACT <br>
+			Big Flavours. Crispy Bites. Happy Moments!<br>
+            Enjoy delicious Fried Chicken and Burgers,
+            Creamy Gelato, Falooda & More.
+        </p>
+		<div class="opening-hours">
+    <h3>🕒 OPENING HOURS</h3>
+    <p>
+        <strong>Monday - Sunday:</strong><br>
+        11:00 AM - 09:00 PM
+    </p>
+	</div>
+
+       
+	<a href="#menu" class="btn">EXPLORE OUR MENU</a>
+    </div>
+</section>
+
+<section class="section" id="menu">
+    <h2>🔥 OUR DELICIOUS MENU 🔥</h2>
+    <p class="section-intro">
+        Fresh flavours, irresistible taste and something
+        delicious for everyone!
+    </p>
+
+    <div class="menu">
+
+        <div class="menu-card">
+            <div class="emoji">🍗</div>
+            <h3>Fried Chicken</h3>
+            <p>Golden, crispy, juicy and full of flavour!</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="emoji">🍔</div>
+            <h3>Chicken Burgers</h3>
+            <p>Delicious burgers packed with amazing taste.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="emoji">🍨</div>
+            <h3>Gelato</h3>
+            <p>Smooth, creamy and irresistibly delicious!</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="emoji">🥤</div>
+            <h3>Falooda</h3>
+            <p>A refreshing, sweet and delightful treat.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="special">
+    <h2>GOOD FOOD, GREAT MOOD!</h2>
+    <p>
+        Come hungry, leave happy!<br>
+        Your favourite street food destination awaits.
+    </p>
+    <a href="#location" class="btn">FIND OUR SHOP</a>
+</section>
+
+
+<section class="order-section" id="order">
+
+    <h2>🍔 ORDER ONLINE NOW!</h2>
+
+    <p>
+        Craving ZAKOOTA? Enjoy your favourite food
+        delivered straight to your door!
+    </p>
+
+    <div class="order-buttons">
+	
+		<a class="order-btn call-btn"
+		href="tel:+61434353939">
+		📞 Call to Order
+		</a>
+}
+
+        <a class="order-btn uber-btn"
+           href="https://www.ubereats.com/au/store/zakoota/0hZ7ZTD3St-EEfLUY7Udfw?srsltid=AYCX9vIu294ftYw8GGvmHy6-LAG22R0EnMlY25oN2HNj9QxL1WCYliw9"
+           target="_blank"
+           rel="noopener noreferrer">
+           Order with Uber Eats
+        </a>
+
+        <a class="order-btn door-btn"
+           href="https://www.doordash.com/en-AU/store/zakoota-bonner-52118121/120703955/?srsltid=AYCX9vKgF_wYKLMJTqqTJizQ53nRIwzBwSJSuOcS8-i0UZ9BVF2-z1sq"
+           target="_blank"
+           rel="noopener noreferrer">
+           Order with DoorDash
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="location" id="location">
+    <h2>📍 VISIT ZAKOOTA</h2>
+    <p>
+        ZAKOOTA – New York Street Food<br>
+        Shop 4, 61 Mabo Boulevard<br>
+        Bonner
+    </p>
+    <br>
+    <p>🟢 100% HALAL</p>
+    <br>
+    <a class="btn"
+       href="https://www.google.com/maps/search/?api=1&query=Shop+4+61+Mabo+Boulevard+Bonner"
+       target="_blank">
+       GET DIRECTIONS
+    </a>
+	
+	
+</section>
+
+<footer>
+    <p><strong>ZAKOOTA</strong> – New York Street Food</p>
+    <p>Fried Chicken • Burgers • Gelato • Falooda</p>
+    <p>© 2026 ZAKOOTA. All Rights Reserved.</p>
+    <p>SEE YOU SOON! ❤️</p>
+</footer>
+
+</body>
+</html>
