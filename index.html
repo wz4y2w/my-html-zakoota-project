@@ -304,6 +304,16 @@ footer strong {
     line-height: 1.8;
 }
 
+.qr-code {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto 0;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+}
+
 .qr-link {
     display: inline-block;
     margin-top: 18px;
@@ -353,12 +363,13 @@ footer strong {
         <strong>Monday - Sunday:</strong><br>
         11:00 AM - 09:00 PM
     </p>
-    <a class="qr-link"
-       href="https://myqrcode.mobi/a10e99cd"
-       target="_blank"
-       rel="noopener noreferrer">
-       📱 SCAN OUR QR CODE
-    </a>
+    <p style="margin-top: 18px; font-weight: bold; color: #ffdf00;">📱 SCAN TO OPEN OUR QR PAGE</p>
+    <img
+       class="qr-code"
+       src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fmyqrcode.mobi%2Fa10e99cd"
+       alt="QR code to open ZAKOOTA's QR page"
+       width="180"
+       height="180">
 	</div>
 
        
