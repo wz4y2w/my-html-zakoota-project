@@ -4,7 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZAKOOTA | New York Street Food</title>
+<title>ZAKOOTA | Halal Street Food, Fried Chicken, Burgers & Desserts in Bonner ACT</title>
+<meta name="description" content="Visit ZAKOOTA in Bonner, ACT for flavour-packed halal fried chicken, chicken burgers, creamy gelato and falooda. Dine in or order online. Open daily 11am–9pm.">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="ZAKOOTA – Big Flavours. Happy Moments.">
+<meta property="og:description" content="Crispy fried chicken, delicious burgers, gelato and falooda in Bonner, ACT. Order online or visit us today.">
+<meta property="og:type" content="website">
 
 <style>
 * {
@@ -335,6 +340,66 @@ footer strong {
     color: #111;
 }
 
+
+/* Marketing-focused refinements */
+:root { --zakoota-red:#ed1c24; --zakoota-yellow:#ffdf00; }
+body { line-height:1.6; background:#101010; }
+header {
+ position:sticky; top:0; z-index:20; background:rgba(8,8,8,.96);
+ backdrop-filter:blur(12px); padding:15px 7%;
+ box-shadow:0 5px 22px rgba(0,0,0,.28);
+}
+.logo { font-size:30px; }
+nav { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+nav a { margin-left:14px; padding:9px 12px; border-radius:22px; transition:.2s; }
+nav a:hover { background:#242424; color:var(--zakoota-yellow); }
+.hero { min-height:650px; position:relative; background-position:center 42%; }
+.hero-content { max-width:850px; }
+.hero h1 { letter-spacing:3px; }
+.hero p { max-width:680px; margin:0 auto 28px; color:#f1f1f1; }
+.btn { box-shadow:0 8px 22px rgba(237,28,36,.25); }
+.section { padding:82px 7%; }
+.menu { max-width:1180px; margin:0 auto; gap:24px; }
+.menu-card {
+ padding:16px 16px 24px; overflow:hidden; text-align:left;
+ background:linear-gradient(160deg,#242424,#171717);
+ border:1px solid #383838; box-shadow:0 12px 28px rgba(0,0,0,.22);
+}
+.menu-card:hover { box-shadow:0 18px 34px rgba(0,0,0,.4); }
+.menu-photo { height:205px; border-radius:12px; margin-bottom:18px; }
+.menu-card h3 { font-size:22px; }
+.menu-card p { font-size:15px; }
+.section-intro { max-width:620px; margin-left:auto; margin-right:auto; }
+.special { background:linear-gradient(115deg,#b90e17,#ed1c24 55%,#b90e17); }
+.order-section { padding:78px 20px; background:#151515; }
+.order-section p { max-width:600px; margin:0 auto 30px; line-height:1.7; }
+.order-buttons { gap:14px; }
+.order-btn { min-width:190px; box-shadow:0 8px 20px rgba(0,0,0,.2); }
+.opening-hours {
+ background:rgba(15,15,15,.82); border:1px solid rgba(255,223,0,.75);
+ box-shadow:0 12px 30px rgba(0,0,0,.3); backdrop-filter:blur(5px);
+}
+.location { padding:78px 20px; }
+footer { line-height:1.9; }
+@media(max-width:650px) {
+ header { padding:14px 5%; }
+ nav { justify-content:center; gap:2px; }
+ nav a { margin:0 2px; padding:8px 9px; }
+ .hero { min-height:590px; padding:42px 18px; }
+ .hero h1 { font-size:clamp(44px,14vw,72px); }
+ .section { padding:60px 6%; }
+ .menu { grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+ .menu-card { padding:10px 10px 17px; }
+ .menu-photo { height:135px; }
+ .menu-card h3 { font-size:18px; }
+ .menu-card p { font-size:13px; }
+ .order-btn { width:min(100%,340px); }
+}
+@media(max-width:380px) {
+ .menu { grid-template-columns:1fr; }
+ .menu-photo { height:190px; }
+}
+
 </style>
 </head>
 
@@ -376,8 +441,8 @@ footer strong {
 <section class="section" id="menu">
     <h2>🔥 OUR DELICIOUS MENU 🔥</h2>
     <p class="section-intro">
-        Fresh flavours, irresistible taste and something
-        delicious for everyone!
+        Fresh flavours, generous portions and feel-good favourites.
+        Discover your next craving at ZAKOOTA!
     </p>
 
     <div class="menu">
@@ -434,7 +499,6 @@ footer strong {
 		href="tel:+61434353939">
 		📞 Call to Order
 		</a>
-}
 
         <a class="order-btn uber-btn"
            href="https://www.ubereats.com/au/store/zakoota/0hZ7ZTD3St-EEfLUY7Udfw?srsltid=AYCX9vIu294ftYw8GGvmHy6-LAG22R0EnMlY25oN2HNj9QxL1WCYliw9"
