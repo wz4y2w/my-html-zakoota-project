@@ -485,6 +485,35 @@ footer strong { color: var(--zakoota-red); }
 .btn { background: var(--zakoota-red); }
 .btn:hover { background: var(--zakoota-yellow); color: var(--ink); }
 
+
+/* Online ordering placed directly below opening hours in the hero */
+.hero-content .order-section {
+    background: rgba(255,255,255,.96);
+    border: 1px solid #ead9bd;
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(70,45,20,.10);
+    padding: 20px 18px;
+    margin: 18px auto 20px;
+    max-width: 760px;
+}
+.hero-content .order-section h2 {
+    color: #d9232e;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+.hero-content .order-section p {
+    color: #626262;
+    font-size: 15px;
+    margin: 0 auto 14px;
+}
+.hero-content .order-buttons { gap: 10px; }
+.hero-content .order-btn {
+    min-width: 150px;
+    padding: 12px 18px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
 </style>
 </head>
 
@@ -518,6 +547,40 @@ footer strong { color: var(--zakoota-red); }
         11:00 AM - 09:00 PM
     </p>
 </div>
+
+<section class="order-section" id="order">
+
+    <h2>🍔 ORDER ONLINE NOW!</h2>
+
+    <p>
+        Craving ZAKOOTA? Enjoy your favourite food
+        delivered straight to your door!
+    </p>
+
+    <div class="order-buttons">
+	
+		<a class="order-btn call-btn"
+		href="tel:+61434353939">
+		📞 Call to Order
+		</a>
+
+        <a class="order-btn uber-btn"
+           href="https://www.ubereats.com/au/store/zakoota/0hZ7ZTD3St-EEfLUY7Udfw?srsltid=AYCX9vIu294ftYw8GGvmHy6-LAG22R0EnMlY25oN2HNj9QxL1WCYliw9"
+           target="_blank"
+           rel="noopener noreferrer">
+           Order with Uber Eats
+        </a>
+
+        <a class="order-btn door-btn"
+           href="https://www.doordash.com/en-AU/store/zakoota-bonner-52118121/120703955/?srsltid=AYCX9vKgF_wYKLMJTqqTJizQ53nRIwzBwSJSuOcS8-i0UZ9BVF2-z1sq"
+           target="_blank"
+           rel="noopener noreferrer">
+           Order with DoorDash
+        </a>
+
+    </div>
+
+</section>
 
 <a href="#menu" class="btn">EXPLORE OUR MENU</a>
     
@@ -569,39 +632,7 @@ footer strong { color: var(--zakoota-red); }
 </section>
 
 
-<section class="order-section" id="order">
 
-    <h2>🍔 ORDER ONLINE NOW!</h2>
-
-    <p>
-        Craving ZAKOOTA? Enjoy your favourite food
-        delivered straight to your door!
-    </p>
-
-    <div class="order-buttons">
-	
-		<a class="order-btn call-btn"
-		href="tel:+61434353939">
-		📞 Call to Order
-		</a>
-
-        <a class="order-btn uber-btn"
-           href="https://www.ubereats.com/au/store/zakoota/0hZ7ZTD3St-EEfLUY7Udfw?srsltid=AYCX9vIu294ftYw8GGvmHy6-LAG22R0EnMlY25oN2HNj9QxL1WCYliw9"
-           target="_blank"
-           rel="noopener noreferrer">
-           Order with Uber Eats
-        </a>
-
-        <a class="order-btn door-btn"
-           href="https://www.doordash.com/en-AU/store/zakoota-bonner-52118121/120703955/?srsltid=AYCX9vKgF_wYKLMJTqqTJizQ53nRIwzBwSJSuOcS8-i0UZ9BVF2-z1sq"
-           target="_blank"
-           rel="noopener noreferrer">
-           Order with DoorDash
-        </a>
-
-    </div>
-
-</section>
 
 
 <section class="location" id="location">
