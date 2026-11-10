@@ -560,6 +560,40 @@ footer p { margin: 3px 0; }
     .location { padding-top: 34px; padding-bottom: 34px; }
 }
 
+
+/* Clear, polished welcome message hierarchy */
+.hero-intro {
+    max-width: 700px;
+    margin: 14px auto 18px;
+}
+.hero-address {
+    margin: 0 0 7px;
+    color: #8a5b24;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.hero-tagline {
+    margin: 0 0 8px;
+    color: #d9232e;
+    font-size: clamp(21px, 3vw, 27px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+.hero-description {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #49443e;
+    font-size: 17px;
+    line-height: 1.5;
+}
+@media(max-width:650px) {
+    .hero-intro { margin: 10px auto 14px; }
+    .hero-address { font-size: 11px; letter-spacing: 1px; }
+    .hero-description { font-size: 15px; }
+}
+
 </style>
 </head>
 
@@ -580,12 +614,14 @@ footer p { margin: 3px 0; }
         <h1>ZAKOOTA</h1>
         <h2>WELCOME TO NEW YORK STREET FOOD!</h2>
 
-        <p>
-            At Shop 4, 61 Mabo Boulevard Bonner ACT <br>
-			Big Flavours. Crispy Bites. Happy Moments!<br>
-            Enjoy delicious Fried Chicken and Burgers,
-            Creamy Gelato, Falooda & More.
-        </p>
+        <div class="hero-intro">
+            <p class="hero-address">SHOP 4 · 61 MABO BOULEVARD, BONNER ACT</p>
+            <p class="hero-tagline">Big Flavours. Crispy Bites. Happy Moments!</p>
+            <p class="hero-description">
+                Enjoy delicious fried chicken and burgers, creamy gelato,
+                refreshing falooda and more.
+            </p>
+        </div>
 		<div class="opening-hours">
     <h3>🕒 OPENING HOURS</h3>
     <p>
