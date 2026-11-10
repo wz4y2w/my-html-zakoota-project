@@ -620,20 +620,26 @@ footer p { margin: 3px 0; }
 }
 
 
-/* Burger photo above the online ordering callout */
+/* Small burger photo alongside the online ordering heading */
+.hero-content .order-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
 .hero-content .order-burger-photo {
-    display: block;
-    width: min(100%, 250px);
-    height: 145px;
+    display: inline-block;
+    flex: 0 0 auto;
+    width: 48px;
+    height: 42px;
     object-fit: contain;
-    margin: 0 auto 10px;
-    border-radius: 14px;
+    margin: 0;
+    border-radius: 6px;
 }
 @media (max-width: 650px) {
-    .hero-content .order-burger-photo {
-        width: min(100%, 210px);
-        height: 120px;
-    }
+    .hero-content .order-heading { gap: 7px; font-size: clamp(19px, 5vw, 25px); }
+    .hero-content .order-burger-photo { width: 36px; height: 34px; }
 }
 
 </style>
@@ -674,8 +680,7 @@ footer p { margin: 3px 0; }
 
 <section class="order-section" id="order">
 
-    <img class="order-burger-photo" src="https://cdn.sitedish.nl/www.belpanini.nl/img/gerechten/6a18c32265445_CSB.png" alt="Freshly prepared chicken burger" loading="lazy">
-    <h2>ORDER ONLINE NOW!</h2>
+    <h2 class="order-heading"><img class="order-burger-photo" src="https://cdn.sitedish.nl/www.belpanini.nl/img/gerechten/6a18c32265445_CSB.png" alt="Chicken burger" loading="lazy"><span>ORDER ONLINE NOW!</span></h2>
 
     <p>
         Craving ZAKOOTA? Enjoy your favourite food
