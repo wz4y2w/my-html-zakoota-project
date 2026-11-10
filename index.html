@@ -594,6 +594,31 @@ footer p { margin: 3px 0; }
     .hero-description { font-size: 15px; }
 }
 
+
+/* Real flame photographs framing the menu heading */
+.section#menu .menu-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+.section#menu .menu-flame {
+    display: block;
+    flex: 0 0 auto;
+    width: 42px;
+    height: 48px;
+    object-fit: contain;
+}
+.section#menu .menu-flame-right {
+    transform: scaleX(-1);
+}
+@media (max-width: 650px) {
+    .section#menu .menu-heading { gap: 8px; font-size: clamp(20px, 5vw, 30px); }
+    .section#menu .menu-flame { width: 30px; height: 36px; }
+}
+
 </style>
 </head>
 
@@ -669,7 +694,7 @@ footer p { margin: 3px 0; }
 </section>
 
 <section class="section" id="menu">
-    <h2>🔥 OUR DELICIOUS MENU 🔥</h2>
+    <h2 class="menu-heading"><img src="https://purepng.com/download/gKLX6h1zkxqin5gzhDHWG3oB3wxT6kfEnbFGs4fDcOsLrCYvsAo8xKPwlVzLFcjZ9A7wPnYNmonjOD4DfANi2ZUBPMCsFRL6eFhkOuyhsJdnqa07X3jBMauh910pirqTw53mjS8C86gjjflPCgrFe6E8Hd6qiRScV4k27E3MaxNBcw6TWVxxL6m8zRwCicDRuTwYSxZO/small" alt="Real flame photograph" class="menu-flame menu-flame-left" loading="lazy"><span>OUR DELICIOUS MENU</span><img src="https://purepng.com/download/gKLX6h1zkxqin5gzhDHWG3oB3wxT6kfEnbFGs4fDcOsLrCYvsAo8xKPwlVzLFcjZ9A7wPnYNmonjOD4DfANi2ZUBPMCsFRL6eFhkOuyhsJdnqa07X3jBMauh910pirqTw53mjS8C86gjjflPCgrFe6E8Hd6qiRScV4k27E3MaxNBcw6TWVxxL6m8zRwCicDRuTwYSxZO/small" alt="Real flame photograph" class="menu-flame menu-flame-right" loading="lazy"></h2>
     <p class="section-intro">
         Fresh flavours, generous portions and feel-good favourites.
         Discover your next craving at ZAKOOTA!
